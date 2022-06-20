@@ -17,6 +17,7 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.android.settingslib.widget.IllustrationPreference
@@ -35,7 +36,7 @@
             android:summary="%s"
             android:title="@string/ringer_mode_title" />
 
-        <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="gamespace_suppress_fullscreen_intent"
             android:summary="@string/suppress_fullscreen_intent_summary"
             android:title="@string/suppress_fullscreen_intent_title" />
@@ -68,13 +69,15 @@
             android:key="gamespace_adb_disabled"
             android:title="@string/adb_disabled_title" />
 
-        <com.crdroid.settings.preferences.CustomSeekBarPreference
+        <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="gamespace_menu_opacity"
             android:title="@string/gamespace_menu_opacity_title"
             android:defaultValue="100"
             android:max="100"
-            app:min="0"
-            app:units="%" />
+            android:min="0"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight="%"
+            android:defaultValue="45"/>
 
     </PreferenceCategory>
 
